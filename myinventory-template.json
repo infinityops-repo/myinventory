@@ -1,0 +1,97 @@
+{
+  "exportedApplication": {
+    "applicationDetail": {
+      "name": "Gestão de Instâncias EC2",
+      "isPublic": false
+    },
+    "pages": [
+      {
+        "name": "Dashboard",
+        "layouts": [
+          {
+            "widgets": [
+              {
+                "type": "TEXT_WIDGET",
+                "widgetId": "text1",
+                "widgetName": "Titulo",
+                "topRow": 0,
+                "bottomRow": 4,
+                "leftColumn": 0,
+                "rightColumn": 16,
+                "text": "Gestão de Instâncias EC2",
+                "fontSize": "HEADING1",
+                "isVisible": true
+              },
+              {
+                "type": "STATBOX_WIDGET",
+                "widgetId": "statbox1",
+                "widgetName": "TotalInstancias",
+                "topRow": 4,
+                "bottomRow": 8,
+                "leftColumn": 0,
+                "rightColumn": 8,
+                "label": "Total de Instâncias",
+                "value": "10",
+                "isVisible": true
+              },
+              {
+                "type": "STATBOX_WIDGET",
+                "widgetId": "statbox2",
+                "widgetName": "CustoTotal",
+                "topRow": 4,
+                "bottomRow": 8,
+                "leftColumn": 8,
+                "rightColumn": 16,
+                "label": "Custo Total",
+                "value": "$500/mês",
+                "isVisible": true
+              },
+              {
+                "type": "CHART_WIDGET",
+                "widgetId": "chart1",
+                "widgetName": "EstadoInstancias",
+                "topRow": 8,
+                "bottomRow": 24,
+                "leftColumn": 0,
+                "rightColumn": 16,
+                "chartType": "PIE_CHART",
+                "isVisible": true,
+                "chartName": "Estado das Instâncias",
+                "chartData": {
+                  "labels": ["Running", "Stopped"],
+                  "datasets": [
+                    {
+                      "data": [8, 2]
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "CHART_WIDGET",
+                "widgetId": "chart2",
+                "widgetName": "CustosPorTipo",
+                "topRow": 24,
+                "bottomRow": 40,
+                "leftColumn": 0,
+                "rightColumn": 16,
+                "chartType": "BAR_CHART",
+                "isVisible": true,
+                "chartName": "Custos por Tipo de Instância",
+                "chartData": {
+                  "labels": ["t3.micro", "t3.small"],
+                  "datasets": [
+                    {
+                      "data": [200, 300]
+                    }
+                  ]
+                }
+              }
+            ],
+            "layoutOnLoadActions": []
+          }
+        ],
+        "slug": "dashboard"
+      }
+    ]
+  }
+}
